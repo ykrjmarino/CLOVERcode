@@ -1,0 +1,18 @@
+PORT=5000
+
+#OAUTH PROCESS
+APP_ID=3F784GS845IGF0
+APP_SECRET=abc23573-0123-d123-1e23-f1234gh4ij12
+# https://sandbox.dev.clover.com/oauth/token?client_id=3F784GS845IGF0&client_secret=abc23573-0123-d123-1e23-f1234gh4ij12&grant_type=client_credentials
+
+CLOVER_TOKEN=ff0a7a93-f0c8-d540-bdb8-a96d6ee5f59f #used in the header (Authorization: Bearer ...)
+# cc_clover
+# https://sandbox.dev.clover.com/setupapp/m/FF23SET36FGH1/api-tokens
+
+
+MERCHANT_ID=FF23SET36FGH1 #used in the URL
+# test in postman: authorization (bearer token)
+# https://apisandbox.dev.clover.com/v3/merchants/FF23SET36FGH1/customers
+# https://apisandbox.dev.clover.com/v3/merchants/FF23SET36FGH1/items
+
+MID=RCTSTAVI0010002
