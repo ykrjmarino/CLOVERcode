@@ -1,4 +1,4 @@
-PORT=5000
+PORT=3001
 
 #OAUTH PROCESS
 APP_ID=3F784GS845IGF0
@@ -16,3 +16,10 @@ MERCHANT_ID=FF23SET36FGH1 #used in the URL
 # https://apisandbox.dev.clover.com/v3/merchants/FF23SET36FGH1/items
 
 MID=RCTSTAVI0010002
+
+# from MarketplaceGHL (app name: playground)
+CLIENT_ID=12345abcd123a1fcde123c4-moby0ily
+CLIENT_SECRET=fad123b-4t3s-25de-rtra-2w54fs213ab0
+REDIRECT_URI=http://localhost:3001/oauth/callback
+ACCESS_TOKEN=your_access_token_here
+SCOPES=contacts.readonly contacts.write
