@@ -1,6 +1,6 @@
 PORT=3001
 
-#OAUTH PROCESS
+#OAUTH PROCESS --- NOT NEEDED IN PRIVATE INTEGRATION ---
 APP_ID=3F784GS845IGF0
 APP_SECRET=abc23573-0123-d123-1e23-f1234gh4ij12
 # https://sandbox.dev.clover.com/oauth/token?client_id=3F784GS845IGF0&client_secret=abc23573-0123-d123-1e23-f1234gh4ij12&grant_type=client_credentials
@@ -17,6 +17,13 @@ MERCHANT_ID=FF23SET36FGH1 #used in the URL
 
 MID=RCTSTAVI0010002
 
+#FROM ANOTHER ACCOUNT
+    CLOVER_TOKEN=2abc17d6-d31f-5a81-59de-6t2weh45x26a
+    MERCHANT_ID=TGS7RETHDWIZ2
+    CLOVER_BASE=https://api.clover.com
+
+
+#NOT NEEDED--
 # from MarketplaceGHL (app name: playground)
 CLIENT_ID=12345abcd123a1fcde123c4-moby0ily
 CLIENT_SECRET=fad123b-4t3s-25de-rtra-2w54fs213ab0

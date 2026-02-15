@@ -48,13 +48,30 @@ export const getCloverPayments = async (req, res) => {
       }
     );
 
-    const payments = response.data.elements.map(p => ({
-      id: p.id,
-      amount: p.amount,
-      createdTime: p.createdTime,
-      employeeId: p.employee?.id,
-      orderId: p.order?.id,
-    }));
+    const payments = response.data.elements.map(p => {
+      const date = new Date(p.createdTime);
+      const estDate = new Date(date.toLocaleString("en-US", { timeZone: "America/New_York" }));
+
+      const hours = estDate.getHours();
+      const minutes = estDate.getMinutes().toString().padStart(2, "0");
+      const seconds = estDate.getSeconds().toString().padStart(2, "0");
+      const ampm = hours >= 12 ? "PM" : "AM";
+      const hour12 = hours % 12 === 0 ? 12 : hours % 12;
+
+      const exactTime = `${hour12}:${minutes}:${seconds} ${ampm}`;
+      const dayOfWeek = estDate.toLocaleString("en-US", { weekday: "long", timeZone: "America/New_York" });
+
+      return {
+        id: p.id,
+        amount: p.amount,
+        createdTime: p.createdTime,
+        exact_time: exactTime,
+        ampm: ampm,
+        day_of_week: dayOfWeek,
+        employeeId: p.employee?.id,
+        orderId: p.order?.id,
+      };
+    });
 
     res.json(payments);
   } catch (err) {
